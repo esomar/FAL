@@ -1,0 +1,199 @@
+.modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}
+
+.signupForm {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    max-width: 700px;
+    max-height: 100%;
+    margin: 3% auto 3% auto;
+}
+
+.signinForm {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    max-width: 500px;
+    max-height: 100%;
+    margin: 3% auto 3% auto;
+}
+
+.signupFormElement {
+    margin: 20px;
+}
+
+.signinFormElement {
+    margin: 20px;
+}
+
+#signupFormbtn {
+    margin: 10px;
+    text-align: center;
+}
+
+#signinFormbtn {
+    margin: 10px;
+    text-align: center;
+}
+
+#signinFormTitle {
+    text-align: center;
+}
+
+#signupFormTitle {
+    text-align: center;
+}
+
+#signinFormWelcome {
+    text-align: center;
+}
+
+#signupFormWelcome {
+    text-align: center;
+}
+
+.navbtn {
+    border: none;
+}
+
+
+.footer-top {
+    padding: 60px 0;
+    background: #343a40;
+    text-align: left;
+    color: #aaa;
+
+}
+
+.footer-top h3 {
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+.footer-about img.logo-footer {
+    max-width: 74px;
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.footer-about p a {
+    color: white;
+    border: 0;
+}
+
+
+
+
+.footer-about p a:hover,
+.footer-about p a:focus {
+    border: 0;
+}
+
+
+.footer-contact i {
+    font-size: 18px;
+    color: #666;
+}
+
+.footer-contact p a {
+    color: white;
+    border: 0;
+}
+
+.footer-contact p a:hover,
+.footer-contact p a:focus {
+    border: 0;
+}
+
+
+.footer-links a {
+    color: #aaa;
+    border: 0;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    color: #fff;
+}
+
+.footer-bottom {
+    padding: 15px 0 17px 0;
+    background: #2e3338;
+    color: #aaa;
+}
+
+.footer-bottom a {
+    color: white;
+}
+
+
+.footer-copyright {
+    padding-top: 5px;
+    text-align: center;
+}
+
+.footer-copyright a {
+    color: #fff;
+    border: 0;
+}
+
+.footer-copyright a:hover,
+.footer-copyright a:focus {
+    color: #aaa;
+    border: 0;
+}
+/*
+form > div > div > input[id="f-name"],
+form > div > div > input[id="l-name"] {
+    width: 100%;
+    padding: 20px 20px 20px 50px;
+}
+
+form > div > div > input[id="f-name"]:focus,
+form > div > div > input[id="l-name"]:focus {
+    outline: 0;
+    background: white;
+}
+
+form > div > div > input[id="f-name"]:focus + label,
+form > div > div > input[id="l-name"]:focus + label {
+    opacity: 0;
+}
+
+form > div > div > input[id="f-name"]:valid,
+form > div > div > input[id="l-name"]:valid {
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/check.svg);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+
+form > div > div > input[id="f-name"]:valid + label,
+form > div > div > input[id="l-name"]:valid + label {
+    opacity: 0;
+
+}
+
+form > div > div > input[id="f-name"]:invalid:not(:focus):not(:placeholder-shown),
+form > div > div > input[id="l-name"]:invalid:not(:focus):not(:placeholder-shown){
+    background: pink;
+}
+
+form > div > div > input[id="f-name"]:invalid:not(:focus):not(:placeholder-shown) + label,
+form > div > div > input[id="l-name"]:invalid:not(:focus):not(:placeholder-shown) + label {
+    opacity: 0;
+}
+
+form > div > div > input[id="f-name"]:invalid:focus:not(:placeholder-shown) ~ .requirements,
+form > div > div > input[id="l-name"]:invalid:focus:not(:placeholder-shown) ~ .requirements{
+    max-height: 200px;
+    padding: 0 30px 20px 50px;
+}
+
+*/
+
