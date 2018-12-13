@@ -1,6 +1,6 @@
 applications:
   - path: .
-    name: FAL
+    name: fal
     environment_json: {}
     memory: 128M
     instances: 1
