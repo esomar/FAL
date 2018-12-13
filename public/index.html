@@ -70,20 +70,24 @@
             <form>
                 <div class="signupFormElement">
                     <div class="input-group">
-                        <input type="text" id="f-name" name="first_name" class="form-control" placeholder="First Name" required>
-                        <input type="text" id="l-name" name="last_name" class="form-control" placeholder="Last Name" required>
+                        <input type="text" id="f-name" name="first_name" class="form-control" placeholder="First Name" onkeyup="firstnameVali()" onblur="firstnameVali()">
+                        <input type="text" id="l-name" name="last_name" class="form-control" placeholder="Last Name" onkeyup="lastnameVali()" onblur="lastnameVali()">
                     </div>
+                    <span id="f-namespan" class="text-danger"> </span>
+                    <span id="l-namespan" class="text-danger"> </span>
+
                 </div>
 
                 <div class="signupFormElement">
-                    <input type="text" class="form-control" id="InputID" placeholder="ID" required>
+                    <input type="text" class="form-control" id="InputID" placeholder="ID" onkeyup="idVali()" onblur="idVali()">
+                    <span id="idspan" class="text-danger"> </span>
                 </div>
 
                 <div class="signupFormElement">
-                    <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" required>
-              
+                    <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" onkeyup="emailVali()" onblur="emailVali()">
+                    <span id="emailspan" class="text-danger"> </span>
                 </div>
-             
+
 
                 <div class="signupFormElement">
                     <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
