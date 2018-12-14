@@ -79,7 +79,7 @@
                 </div>
 
                 <div class="signupFormElement">
-                    <input type="text" class="form-control" id="InputID" placeholder="ID" onkeyup="idVali()" onblur="idVali()">
+                    <input type="number" class="form-control" id="InputID" placeholder="ID" onkeyup="idVali()" onblur="idVali()">
                     <span id="idspan" class="text-danger"> </span>
                 </div>
 
@@ -90,11 +90,13 @@
 
 
                 <div class="signupFormElement">
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Password"  onkeyup="passvali()" onblur="passvali()">
+                      <span id="passspan1" class="text-danger"> </span>
                 </div>
 
                 <div class="signupFormElement">
-                    <input type="password" class="form-control" id="inputPassword2" placeholder="Repeat Password" required>
+                    <input type="password" class="form-control" id="inputPassword2" placeholder="Repeat Password"  onkeyup="passconfirmvali()" onblur="passconfirmvali()">
+                      <span id="passspan2" class="text-danger"> </span>
                 </div>
 
                 <div class="signupFormElement">

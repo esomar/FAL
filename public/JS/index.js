@@ -55,27 +55,62 @@ function idVali() {
     }
 
 }
-function valiemailfunction(email){
-    var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    return re.test(email);
+
+function valiemailfunction(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+
 }
+
 function emailVali() {
 
     var emailinput = document.getElementById('inputEmail').value;
-    var emailinput2=document.getElementById('inputEmail');
-var mailformat=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     if (emailinput == "") {
         document.getElementById('emailspan').style.display = 'block';
         document.getElementById('emailspan').innerHTML = " ** Please fill the email field";
 
-    } else if (valiemailfunction(inputEmail)) {
+    } else if (valiemailfunction(emailinput) == false) {
         document.getElementById('emailspan').style.display = 'block';
         document.getElementById('emailspan').innerHTML = " invalde Formate";
 
-
     } else {
         document.getElementById('emailspan').style.display = 'none';
+    }
+
+}
+
+function passvali() {
+    var pass1input = document.getElementById('inputPassword').value;
+    if (pass1input == "") {
+        document.getElementById('passspan1').style.display = 'block';
+        document.getElementById('passspan1').innerHTML = "Please fill the password field";
+
+    } else if ((pass1input.length <= 5) || (pass1input.length > 20)) {
+        document.getElementById('passspan1').style.display = 'block';
+        document.getElementById('passspan1').innerHTML = "Passwords lenght must be between  5 and 20";
+
+    } else {
+        document.getElementById('passspan1').style.display = 'none';
+    }
+}
+
+function passconfirmvali() {
+    var pass11input = document.getElementById('inputPassword').value;
+
+    var pass2input = document.getElementById('inputPassword2').value;
+    if (pass2input == "") {
+        document.getElementById('passspan2').style.display = 'block';
+        document.getElementById('passspan2').innerHTML = "Please fill the confirmpassword field";
+
+    } else if (pass11input != pass2input) {
+        document.getElementById('passspan2').style.display = 'block';
+        document.getElementById('passspan2').innerHTML = "Password does not match the confirm password";
+
+
+    } else {
+        document.getElementById('passspan2').style.display = 'none';
+
     }
 
 }
