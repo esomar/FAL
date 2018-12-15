@@ -61,6 +61,15 @@
             </button>
         </div>
     </nav>
+    <div id="stage">
+        <a href="1.jpg"><img class="sliderimg" src="images/img_lights_wide.jpg"></a>
+        <a href="2.jpg"><img class="sliderimg" src="images/img_mountains_wide.jpg"></a>
+        <a href="3.jpg"><img class="sliderimg" src="images/img_nature_wide.jpg"></a>
+        <a href="4.jpg"><img class="sliderimg" src="images/img_snow_wide.jpg"></a>
+    </div>
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
     <div id="signupForm" class="modal" style="display: none; background-image: url(images/blurry_background.png)">
@@ -79,22 +88,24 @@
                 </div>
 
                 <div class="signupFormElement">
-                    <input type="text" class="form-control" id="InputID" placeholder="ID" onkeyup="idVali()" onblur="idVali()">
+                    <input type="number" class="form-control" id="InputID" placeholder="ID" onkeyup="idVali()" onblur="idVali()">
                     <span id="idspan" class="text-danger"> </span>
                 </div>
 
                 <div class="signupFormElement">
-                    <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" onkeyup="emailVali()" onblur="emailVali()">
+                    <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" onchange="emailVali()" onblur="emailVali()">
                     <span id="emailspan" class="text-danger"> </span>
                 </div>
 
 
                 <div class="signupFormElement">
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" onkeyup="passvali()" onblur="passvali()">
+                    <span id="passspan1" class="text-danger"> </span>
                 </div>
 
                 <div class="signupFormElement">
-                    <input type="password" class="form-control" id="inputPassword2" placeholder="Repeat Password" required>
+                    <input type="password" class="form-control" id="inputPassword2" placeholder="Repeat Password" onkeyup="passconfirmvali()" onblur="passconfirmvali()">
+                    <span id="passspan2" class="text-danger"> </span>
                 </div>
 
                 <div class="signupFormElement">
@@ -191,7 +202,7 @@
     </div>
 
     <div class="footer-bottom">
-        <div class="row">
+        <div>
             <div class="col footer-copyright">
                 &copy; 2018 Copyright <a href="www.futureacademyegypt.com">Future Academy</a>
             </div>

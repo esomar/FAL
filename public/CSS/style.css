@@ -138,14 +138,53 @@
 
 .footer-copyright a {
     color: #fff;
-    border: 0;
 }
 
 .footer-copyright a:hover,
 .footer-copyright a:focus {
     color: #aaa;
-    border: 0;
 }
+
+#stage {
+    width: 100%;
+}
+
+
+.sliderimg {
+    width: 100%;
+
+}
+
+#stage a {
+    position: absolute;
+    width: 100%;
+}
+
+#stage a:nth-of-type(1) {
+    animation-name: fader;
+    animation-delay: 5s;
+    animation-duration: 3s;
+    z-index: 20;
+}
+
+#stage a:nth-of-type(2) {
+    z-index: 10;
+}
+
+#stage a:nth-of-type(n+3) {
+    display: none;
+}
+
+@keyframes fader {
+    from {
+        opacity: 9.0;
+    }
+
+    to {
+        opacity: 0.0;
+    }
+}
+
 /*
 form > div > div > input[id="f-name"],
 form > div > div > input[id="l-name"] {
@@ -196,4 +235,3 @@ form > div > div > input[id="l-name"]:invalid:focus:not(:placeholder-shown) ~ .r
 }
 
 */
-
