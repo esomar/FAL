@@ -71,15 +71,18 @@ function idVali() {
 }
 
 function valiemailfunction(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(email).toLowerCase());
-
+    
+     var reg =  /[a-zA-Z0-9]+\@fa-hists\.edu\.eg$/;
+    return reg.test(String(email).toLowerCase());
+    
 }
 
 function emailVali() {
 
     var emailinput = document.getElementById('inputEmail').value;
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+   
+    
+    
     if (emailinput == "") {
         document.getElementById('emailspan').style.display = 'block';
         document.getElementById('emailspan').innerHTML = " ** Please fill the email field";
@@ -128,3 +131,16 @@ function passconfirmvali() {
     }
 
 }
+function depvalidate()
+{
+if(document.signupForm.department.selectedIndex ==" " )
+{
+           document.getElementById('depspan').style.display = 'block';
+            document.getElementById('depspan').innerHTML = "Please choose department";
+return false;
+ 
+}else 
+           document.getElementById('depspan').style.display = 'none';
+return true;
+}
+

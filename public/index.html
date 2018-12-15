@@ -76,7 +76,7 @@
         <div class="signupForm container">
             <h1 id="signupFormTitle">Sign up</h1>
             <h6 id="signupFormWelcome">We are excited to have you as part of our community</h6>
-            <form>
+            <form id="signupForm" name="signupForm" method="get" onSubmit="return depvalidate()">
                 <div class="signupFormElement">
                     <div class="input-group">
                         <input type="text" id="f-name" name="first_name" class="form-control" placeholder="First Name" onkeyup="firstnameVali()" onblur="firstnameVali()">
@@ -109,13 +109,15 @@
                 </div>
 
                 <div class="signupFormElement">
-                    <select class="form-control" required>
+                    <select name="department" class="form-control">
                         <option value=" ">Select Your Department</option>
                         <option>Computer Science</option>
                         <option>Information System</option>
                         <option>Business English</option>
                         <option>Business Arabic</option>
                     </select>
+                                        <span id="depspan" class="text-danger"> </span>
+
                 </div>
 
                 <div class="signupFormElement">
@@ -150,7 +152,7 @@
                 </div>
 
                 <div id="signinFormbtn">
-                    <button type="button" class="btn btn-dark">Done</button>
+                    <input type="submit" name="Submit" value="Submit" class="btn btn-dark">
                 </div>
             </form>
         </div>
