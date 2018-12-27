@@ -5,10 +5,6 @@ html {
     font: 400 15px/1.8 "Lato", sans-serif;
     color: #777;
 }
-.space{
-    padding-bottom: 20px;
-    padding-top: 20px;
-}
 
 .modal {
     position: fixed;
@@ -74,11 +70,9 @@ html {
 
 /*home page image*/
 .jumbotron {
-
     background-image: url("../images/bg-masthead.jpg");
     background-position: center;
     background-repeat: no-repeat;
-
     height: 85vh;
 }
 
@@ -117,10 +111,7 @@ html {
     background-color: #1d809f !important;
 }
 
-.content-section {
-    padding-top: 7.5rem;
-    padding-bottom: 7.5rem;
-}
+
 
 .text-white {
     color: #fff !important;
@@ -129,10 +120,12 @@ html {
 .text-center {
     text-align: center !important;
 }
+
 .content-section {
     padding-top: 1.5rem;
     padding-bottom: 2.5rem;
 }
+
 .service-icon {
     background-color: #fff;
     color: #1d809f;
@@ -149,7 +142,7 @@ html {
 #stage {
     width: 100%;
     padding-bottom: 500px;
-    
+
 }
 
 
