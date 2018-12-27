@@ -5,6 +5,21 @@ html {
     font: 400 15px/1.8 "Lato", sans-serif;
     color: #777;
 }
+.header
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	box-shadow: 0px 5px 20px rgba(0,0,0,0.05);
+	-webkit-transition: all 200ms ease;
+	-moz-transition: all 200ms ease;
+	-ms-transition: all 200ms ease;
+	-o-transition: all 200ms ease;
+	transition: all 200ms ease;
+}
+
 
 .navbtn {
     border: none;
@@ -80,49 +95,7 @@ html {
     box-shadow: 0 3px 3px 0 rgba(0, 0, 0, .1);
 }
 
-/*slider*/
-#stage {
-    width: 100%;
-    padding-bottom: 500px;
 
-}
-
-
-.sliderimg {
-    width: 100%;
-    display: block;
-
-}
-
-#stage a {
-    position: absolute;
-    width: 100%;
-}
-
-#stage a:nth-of-type(1) {
-    animation-name: fader;
-    animation-delay: 5s;
-    animation-duration: 3s;
-    z-index: 20;
-}
-
-#stage a:nth-of-type(2) {
-    z-index: 10;
-}
-
-#stage a:nth-of-type(n+3) {
-    display: none;
-}
-
-@keyframes fader {
-    from {
-        opacity: 9.0;
-    }
-
-    to {
-        opacity: 0.0;
-    }
-}
 
 /*footer*/
 .footer-top {
