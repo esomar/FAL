@@ -1,0 +1,23 @@
+{
+	"name": "NodejsStarterApp",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"bcryptjs": "^2.4.3",
+		"body-parser": "latest",
+		"cfenv": "1.0.x",
+		"cloudant": "latest",
+		"cookie-parser": "^1.4.3",
+		"express": "^4.16.4",
+		"morgan": "^1.9.1",
+		"passport": "^0.4.0",
+		"passport-local": "^1.0.0"
+	},
+	"repository": {},
+	"engines": {
+		"node": "6.x"
+	}
+}
