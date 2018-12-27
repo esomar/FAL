@@ -35,7 +35,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a href="Register.html" class="navbtn nav-link btn-link">Register</a>
+                        <a href="register.html" class="navbtn nav-link btn-link">Register</a>
                     </li>
                     <li class="nav-item">
                         <a href="login.html" class="navbtn nav-link btn-link">Login</a>
@@ -66,17 +66,17 @@
     <div id="signinForm">
         <div class="signinForm container">
             <h1 id="signinFormTitle">Login</h1>
-            <form>
+            <form method="POST" action="login.html">
                 <div class="signinFormElement">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="E-mail">
+                    <input type="text" class="form-control" id="inputEmail" name="inputEmail" placeholder="ID">
                 </div>
 
                 <div class="signinFormElement">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    <input type="password" class="form-control" id="inputPassword" name="inputPassword" placeholder="Password">
                 </div>
 
                 <div id="signinFormbtn">
-                    <input type="submit" name="Submit" value="Submit" class="btn btn-dark">
+                    <button class="btn btn-dark">Login</button>
                 </div>
             </form>
         </div>
