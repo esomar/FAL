@@ -30,15 +30,15 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req,res) => {
-	res.sendfile("index.html");
+	res.sendfile('/index.html');
 });
 
 app.get('/register.html', (req,res) => {
-	res.sendfile("register.html");
+	res.sendfile('/register.html');
 });
 
 app.get('/login.html', (req,res) => {
-	res.sendfile("login.html");
+	res.sendfile('/login.html');
 });
 
 app.post('/register.html', (req, res) => {
