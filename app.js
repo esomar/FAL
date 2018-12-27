@@ -24,6 +24,11 @@ var bcrypt = require('bcryptjs');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+
+
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.get('/', (req,res) => {
 	res.sendfile("index.html");
 });
@@ -35,9 +40,6 @@ app.get('/register.html', (req,res) => {
 app.get('/login.html', (req,res) => {
 	res.sendfile("login.html");
 });
-
-app.use(bodyParser.urlencoded({extended: false}));
-app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/register.html', (req, res) => {
 	var id = req.body.InputID;
