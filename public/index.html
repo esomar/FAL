@@ -13,20 +13,20 @@
 <body>
     <nav class=" navbar navbar-inverse navbar-expand-md navbar-dark bg-dark sticky-top ">
         <div>
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="images/logo.png" width="30" height="30" class="d-inline-block align-top" alt=""> Future Academy Library</a>
         </div>
 
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="contact.html">Contact Us</a>
                 </li>
             </ul>
         </div>
@@ -36,10 +36,10 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <button class="navbtn nav-link btn-link" onclick="document.getElementById('signupForm').style.display='block'">Register</button>
+                        <a href="Register.html" class="navbtn nav-link btn-link">Register</a>
                     </li>
                     <li class="nav-item">
-                        <button class="navbtn nav-link btn-link" onclick="document.getElementById('signinForm').style.display='block'" style="width:auto;">Login</button>
+                        <a href="login.html" class="navbtn nav-link btn-link">Login</a>
                     </li>
                     <li>
                         <div class="nav-item btn-group">
@@ -164,99 +164,6 @@
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
-    <div id="signupForm" class="modal" style="display: none; background-image: url(images/blurry_background.png)">
-        <div class="signupForm container">
-            <h1 id="signupFormTitle">Sign up</h1>
-            <h6 id="signupFormWelcome">We are excited to have you as part of our community</h6>
-            <form id="signupForm" name="signupForm" method="get" onSubmit="return depvalidate()">
-                <div class="signupFormElement">
-                    <div class="input-group">
-                        <input type="text" id="f-name" name="first_name" class="form-control" placeholder="First Name" onkeyup="firstnameVali()" onblur="firstnameVali()">
-                        <input type="text" id="l-name" name="last_name" class="form-control" placeholder="Last Name" onkeyup="lastnameVali()" onblur="lastnameVali()">
-                    </div>
-                    <span id="f-namespan" class="text-danger"> </span>
-                    <span id="l-namespan" class="text-danger"> </span>
-
-                </div>
-
-                <div class="signupFormElement">
-                    <input type="number" class="form-control" id="InputID" placeholder="ID" onkeyup="idVali()" onblur="idVali()">
-                    <span id="idspan" class="text-danger"> </span>
-                </div>
-
-                <div class="signupFormElement">
-                    <input type="email" id="inputEmail" class="form-control" placeholder="E-mail" onchange="emailVali()" onblur="emailVali()">
-                    <span id="emailspan" class="text-danger"> </span>
-                </div>
-
-
-                <div class="signupFormElement">
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" onkeyup="passvali()" onblur="passvali()">
-                    <span id="passspan1" class="text-danger"> </span>
-                </div>
-
-                <div class="signupFormElement">
-                    <input type="password" class="form-control" id="inputPassword2" placeholder="Repeat Password" onkeyup="passconfirmvali()" onblur="passconfirmvali()">
-                    <span id="passspan2" class="text-danger"> </span>
-                </div>
-
-                <div class="signupFormElement">
-                    <select name="department" class="form-control">
-                        <option value=" ">Select Your Department</option>
-                        <option>Computer Science</option>
-                        <option>Information System</option>
-                        <option>Business English</option>
-                        <option>Business Arabic</option>
-                    </select>
-                    <span id="depspan" class="text-danger"> </span>
-
-                </div>
-
-                <div class="signupFormElement">
-                    <select class="form-control" required>
-                        <option value=" ">Select Your Level</option>
-                        <option>First Level</option>
-                        <option>Second Level</option>
-                        <option>Third Level</option>
-                        <option>Fourth Level</option>
-                    </select>
-                </div>
-
-                <!--<p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p> -->
-                <div id="signupFormbtn">
-                    <button type="button" class="btn btn-dark">Done</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-
-    <div id="signinForm" class="modal" style="display: none; background-image: url(images/blurry_background.png)">
-        <div class="signinForm container">
-            <h1 id="signinFormTitle">Login</h1>
-            <form>
-                <div class="signinFormElement">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="E-mail">
-                </div>
-
-                <div class="signinFormElement">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
-                </div>
-
-                <div id="signinFormbtn">
-                    <input type="submit" name="Submit" value="Submit" class="btn btn-dark">
-                </div>
-            </form>
-        </div>
-    </div>
-
 
     <script src="JS/index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
