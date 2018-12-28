@@ -15,7 +15,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 var cfenv = require('cfenv');
-var cloudant = require("cloudant")(cloudantCred.url);
+var cloudant = require("@cloudant/cloudant")(cloudantCred.url);
 var mydb = cloudant.db.use("user");
 var bodyParser = require('body-parser');
 var passport = require('passport');
@@ -23,22 +23,30 @@ var localStrategy = require('passport-local');
 var bcrypt = require('bcryptjs');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+var flash = require('connect-flash');
 
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req,res) => {
-	res.sendfile('/index.html');
+	res.location('/');
+	res.redirect('/');
 });
 
 app.get('/register.html', (req,res) => {
-	res.sendfile('/register.html');
+	res.location('/register.html');
+	res.redirect('/register.html');
 });
 
 app.get('/login.html', (req,res) => {
-	res.sendfile('/login.html');
+	res.location('/login.html');
+	res.redirect('/login.html');
+});
+
+app.get('/logout', (req,res) => {
+	res.location('/');
+	res.redirect('/');
 });
 
 app.post('/register.html', (req, res) => {
@@ -59,8 +67,6 @@ app.post('/register.html', (req, res) => {
 		department	: department,
 		level		: level
 	});
-	
-	console.log("register done");
 	res.location('/booking.html');
 	res.redirect('/booking.html');
 });
@@ -83,11 +89,6 @@ var appEnv = cfenv.getAppEnv();
 app.listen(appEnv.port, '0.0.0.0', function() {
   console.log("server starting on " + appEnv.url);
 });
-
-
-
-
-
 
 
 /*
