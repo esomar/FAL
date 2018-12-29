@@ -71,19 +71,22 @@ app.post('/register.html', (req, res) => {
 	res.redirect('/booking.html');
 });
 
-app.post('/login.html', (req, res) => {
-	var id = req.body.inputEmail;
-	var password = req.body.inputPassword;
 
-	mydb.get(id, (err, body) => {
-		if (body.password==password) {
-			res.location('/booking.html');
-			res.redirect('/booking.html');
-		} else {
-				console.log(body.password);
-			}
-	});
+app.post('/login.html', function(req, res) {
+    var logEmail = req.body.inputEmail;
+    var logPassword = req.body.inputPassword;
+
+    mydb.get(logEmail, (err, body) => {
+		  	if (body.password == logPassword) {
+            res.location('/booking.html');
+            res.redirect('/booking.html');
+        }else {
+            res.location('/login.html');
+            res.redirect('/login.html');    
+        }
+    });
 });
+
 
 var appEnv = cfenv.getAppEnv();
 app.listen(appEnv.port, '0.0.0.0', function() {
